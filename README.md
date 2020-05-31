@@ -23,10 +23,10 @@ npm run test
 
 Run tests -- headless (chrome)
 ```bash
-npm run test
+npm run cy:run:chrome
 ```
 
 Run tests -- headless (firefox)
 ```bash
-npm run test
+npm run cy:run:firefox
 ```
