@@ -21,7 +21,7 @@ describe("Order a product flow - mobile viewport", () => {
 
   const mobileSizes = ["iphone-x", "iphone-xr", "samsung-note9", "samsung-s10"];
   const tableSizes = ["ipad-mini", "ipad-2"];
-  const computerSizes = ["macbook-11",	"macbook-13", "macbook-15"];
+  const computerSizes = ["macbook-11", "macbook-13", "macbook-15"];
 
   beforeEach(() => {
     cy.fixture("data.json").then(data => {
@@ -79,7 +79,7 @@ describe("Order a product flow - mobile viewport", () => {
 
   tableSizes.forEach(size => {
     it(`Should order a Test.allTheThings T-shirt: ${size} `, () => {
-      cy.viewport(size, 'landscape');
+      cy.viewport(size, "landscape");
 
       cy.visit("https://www.saucedemo.com/");
 

@@ -1,0 +1,37 @@
+name: Test Flow
+
+on: [push]
+
+jobs:
+  e2e-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Cache node_modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: dependency-cache-{{ hashFiles('package.json') }}
+        restore-keys: |
+          dependency-cache-
+    
+    - name: Install dependencies and verify Cypress
+      run: npm ci
+           npm run cypress:verify
+
+    - run: npm run test
+
+    - name: Upload screenshot artefacts
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: screenshots
+        path: cypress/screenshots 
