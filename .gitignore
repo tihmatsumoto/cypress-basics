@@ -63,3 +63,8 @@ typings/
 # error logs
 cypress/videos
 cypress/screenshots
+
+#reports
+cypress/reports
+cypress/mochawesome-reports
+cypress/full_report.json
