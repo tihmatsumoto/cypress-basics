@@ -40,7 +40,7 @@ jobs:
       if: always()
       with:
         name: E2E Test Reports
-        path: mochawesome-report/
+        path: cypress/mochawesome-report 
 
     - name: Upload screenshot artefacts
       uses: actions/upload-artifact@v2

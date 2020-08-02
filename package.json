@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean-reports": "rm -rf cypress/reports",
-    "test": "npm cypress run",
+    "test": "cypress run",
     "merge-report": "npm mochawesome-merge 'cypress/reports/*.json' > full_report.json",
     "generate-report": "npm marge full_report.json",
     "cypress": "cypress open",
