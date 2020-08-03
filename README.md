@@ -1,6 +1,11 @@
 # CypressTesting
 
-Test project for Sauce Demo using Cypress. Also contains viewport to test under different screensizes.
+Test project for Sauce Demo using Cypress. Might be updated from time to time. 
+
+At this point, it contains:
+- GitHub Actions;
+- Mochawesome Report;
+- Viewport testing;
 
 ### How to run Cypress Testing Repo
 
