@@ -47,4 +47,7 @@ jobs:
       if: failure()
       with:
         name: screenshots
-        path: cypress/screenshots 
+        path: cypress/screenshots
+    
+    - name: Message 
+      run: echo 'message'
