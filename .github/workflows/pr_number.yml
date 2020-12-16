@@ -9,5 +9,9 @@ env:
   PR_NUMBER: ${{ toJson(github.event.number) }}
 
 jobs:
-  - name: Print PR number
-    run: echo "PR number is ${PR_NUMBER}"
+  number:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print PR number
+      run: echo "PR number is ${PR_NUMBER}"
