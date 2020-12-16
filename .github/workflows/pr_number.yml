@@ -1,0 +1,13 @@
+name: PR Number
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+    branches:
+      - master
+env:
+  PR_NUMBER: ${{ toJson(github.event.number) }}
+
+jobs:
+  - name: Print PR number
+    run: echo "PR number is ${PR_NUMBER}"
