@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-30T00:24:07.916Z",
+    "end": "2020-08-30T00:24:12.362Z",
+    "duration": 4446,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7c636a3-f0da-42f5-8227-1a40e62c5b2d",
+      "title": "",
+      "fullFile": "cypress/integration/percyIntegration.spec.js",
+      "file": "cypress/integration/percyIntegration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4d711b5e-930c-42b1-b956-6fc24719ee76",
+          "title": "Visual Testing - Login Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should login",
+              "fullTitle": "Visual Testing - Login Page Should login",
+              "timedOut": null,
+              "duration": 2721,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.saucedemo.com/\");\ncy.percySnapshot();\ncy.get(usernameInput).type(user);\ncy.get(passwordInput).type(pass);\ncy.get(loginButton).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/inventory.html\");",
+              "err": {},
+              "uuid": "cdb146c9-11aa-4b85-a2b2-ff3a2705e5ae",
+              "parentUUID": "4d711b5e-930c-42b1-b956-6fc24719ee76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdb146c9-11aa-4b85-a2b2-ff3a2705e5ae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2721,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

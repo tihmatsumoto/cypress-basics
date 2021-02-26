@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-30T00:28:21.372Z",
+    "end": "2020-08-30T00:28:27.505Z",
+    "duration": 6133,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9483f720-f1ab-42de-9af7-4ee50fa931b4",
+      "title": "",
+      "fullFile": "cypress/integration/order.spec.js",
+      "file": "cypress/integration/order.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac94ef90-343f-4334-8830-d26a5270d567",
+          "title": "Order a product flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should order a Test.allTheThings T-shirt",
+              "fullTitle": "Order a product flow Should order a Test.allTheThings T-shirt",
+              "timedOut": null,
+              "duration": 4321,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.saucedemo.com/\");\ncy.get(usernameInput).type(user);\ncy.get(passwordInput).type(pass);\ncy.get(loginButton).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/inventory.html\");\ncy.get(invContainer).contains(\"div\", \"Test.allTheThings() T-Shirt (Red)\").click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/inventory-item.html?id=3\");\ncy.get(nameProduct).should(\"have.text\", \"Test.allTheThings() T-Shirt (Red)\");\ncy.get(priceProduct).should(\"have.text\", \"$15.99\");\ncy.get(addToCartButton).click();\ncy.get(shopCartIcon).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/cart.html\");\ncy.get(checkoutButton).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/checkout-step-one.html\");\ncy.get(firstNameInput).type(firstName);\ncy.get(lastNameInput).type(lastName);\ncy.get(postalCodeInput).type(postalCode);\ncy.get(continueButton).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/checkout-step-two.html\");\ncy.get(finishButton).click();\ncy.url().should(\"eq\", \"https://www.saucedemo.com/checkout-complete.html\");\ncy.get(messageFinish).should(\"have.text\", \"THANK YOU FOR YOUR ORDER\");",
+              "err": {},
+              "uuid": "06faf20e-833b-4535-97c9-f0d216d50348",
+              "parentUUID": "ac94ef90-343f-4334-8830-d26a5270d567",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "06faf20e-833b-4535-97c9-f0d216d50348"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4321,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
