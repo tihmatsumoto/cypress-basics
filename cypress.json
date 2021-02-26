@@ -1,10 +1,10 @@
 {
-    "watchForFileChanges": false,
-    "video": false,
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "overwrite": false,
-        "html": false,
-        "json": true
-    }
+  "watchForFileChanges": false,
+  "video": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 }

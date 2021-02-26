@@ -1,4 +1,4 @@
-import '@percy/cypress';
+import "@percy/cypress";
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
