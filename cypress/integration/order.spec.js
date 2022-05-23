@@ -1,4 +1,4 @@
-describe('Order a product flow', () => {
+describe('Order a product', () => {
   const invContainer = '.inventory_container';
   const nameProduct = '.inventory_details_name';
   const priceProduct = '.inventory_details_price';
@@ -12,21 +12,15 @@ describe('Order a product flow', () => {
   const finishButton = '.cart_footer .cart_button';
   const messageFinish = '.complete-header';
 
-  let user, pass, firstName, lastName, postalCode;
-
   beforeEach(() => {
-    cy.fixture('data.json').then(data => {
-      (user = data.username),
-        (pass = data.password),
-        (firstName = data.firstName),
-        (lastName = data.lastName),
-        (postalCode = data.postalCode);
-    });
+    cy.fixture('data.json').as('accountData');
     cy.visit('https://www.saucedemo.com/');
   });
 
   it('Should order a Test.allTheThings T-shirt', () => {
-    cy.login(user, pass);
+    const account = this.accountData[0];
+    
+    cy.login(account.username, account.password);
     cy.url().should('eq', 'https://www.saucedemo.com/inventory.html');
 
     cy.get(invContainer)
@@ -46,9 +40,9 @@ describe('Order a product flow', () => {
     cy.get(checkoutButton).click();
 
     cy.url().should('eq', 'https://www.saucedemo.com/checkout-step-one.html');
-    cy.get(firstNameInput).type(firstName);
-    cy.get(lastNameInput).type(lastName);
-    cy.get(postalCodeInput).type(postalCode);
+    cy.get(firstNameInput).type(account.firstName);
+    cy.get(lastNameInput).type(account.lastName);
+    cy.get(postalCodeInput).type(account.postalCode);
     cy.get(continueButton).click();
 
     cy.url().should('eq', 'https://www.saucedemo.com/checkout-step-two.html');
